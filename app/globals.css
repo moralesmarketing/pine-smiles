@@ -2,25 +2,54 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2b2b2b;
+
+  --pine-pink: #ec008c;
+  --pine-orange: #f5821f;
+  --pine-orange-light: #ff9c46;
+  --pine-blue: #00aeef;
+  --pine-purple: #7c51a1;
+  --pine-cream: #fff8f0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-pine-pink: var(--pine-pink);
+  --color-pine-orange: var(--pine-orange);
+  --color-pine-orange-light: var(--pine-orange-light);
+  --color-pine-blue: var(--pine-blue);
+  --color-pine-purple: var(--pine-purple);
+  --color-pine-cream: var(--pine-cream);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+  font-family: var(--font-heading), "Comic Sans MS", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgb(0 0 0 / 0.35);
 }
