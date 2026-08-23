@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { business, doctors, reviews, whatSetsUsApart } from "@/lib/site-data";
+import OfficeTour360 from "@/components/OfficeTour360";
 
 const servicePills = [
   { label: "Pediatric Dentistry", href: "/first-visit-kids", color: "bg-pine-blue" },
@@ -152,19 +153,10 @@ export default function Home() {
           </h2>
           <p className="text-white/85 mb-8 max-w-2xl mx-auto">
             Before coming to our facilities, feel free to take a virtual
-            walk-through &mdash; drag around inside our office right here.
+            walk-through &mdash; drag to look around, and click a room to
+            move through the office.
           </p>
-          <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
-            <iframe
-              title="Pine Smiles Orthodontics & Pediatric Dentistry virtual office tour"
-              src={business.virtualTourEmbedUrl}
-              width="100%"
-              height="420"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <OfficeTour360 />
         </div>
       </section>
 

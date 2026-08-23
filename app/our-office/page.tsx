@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import { business } from "@/lib/site-data";
+import OfficeTour360 from "@/components/OfficeTour360";
 
 export const metadata = { title: "Our Office | Contact | Pine Smiles" };
 
@@ -27,23 +28,11 @@ export default function OurOfficePage() {
             Our voicemail will give you a direct phone number for the
             pediatric dentist on-call.
           </p>
-
-          <div className="rounded-3xl overflow-hidden shadow-lg mt-8 border-2 border-slate-100">
-            <iframe
-              title="Pine Smiles virtual office tour"
-              src={business.virtualTourEmbedUrl}
-              width="100%"
-              height="320"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
           <a
             href={business.mapsDirectionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-pill bg-pine-orange text-white mt-4 inline-flex"
+            className="btn-pill bg-pine-orange text-white mt-6 inline-flex"
           >
             Get Directions
           </a>
@@ -76,6 +65,18 @@ export default function OurOfficePage() {
             Submit
           </button>
         </form>
+      </section>
+
+      <section id="tour" className="bg-pine-purple py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-4 text-center">
+          <h2 className="font-heading text-2xl md:text-3xl text-white mb-4">
+            Take a Look Inside
+          </h2>
+          <p className="text-white/85 mb-8 max-w-2xl mx-auto">
+            Drag to look around, and click a room to walk through the office.
+          </p>
+          <OfficeTour360 />
+        </div>
       </section>
     </div>
   );
