@@ -10,6 +10,8 @@ export const business = {
   },
   mapsQuery:
     "Pine Smiles Orthodontics and Pediatric Dentistry 5811 Pine Ave Suite B Chino Hills CA 91709",
+  virtualTourEmbedUrl:
+    "https://www.google.com/maps?layer=c&cbll=33.9470111,-117.6781502&cbp=12,354.86,,0,84.12&panoid=CIHM0ogKEICAgICEtKuJGw&output=embed",
   mapsDirectionsUrl:
     "https://www.google.com/maps/dir/?api=1&destination=Pine+Smiles+Orthodontics+and+Pediatric+Dentistry+5811+Pine+Ave+Suite+B+Chino+Hills+CA+91709",
   serviceAreas: [

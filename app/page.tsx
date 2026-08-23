@@ -151,15 +151,13 @@ export default function Home() {
             Tour Our Office
           </h2>
           <p className="text-white/85 mb-8 max-w-2xl mx-auto">
-            Before coming to our facilities, feel free to take a look around
-            &mdash; explore our location and street view right here.
+            Before coming to our facilities, feel free to take a virtual
+            walk-through &mdash; drag around inside our office right here.
           </p>
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
             <iframe
-              title="Pine Smiles Orthodontics & Pediatric Dentistry location map and street view"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(
-                business.mapsQuery
-              )}&output=embed`}
+              title="Pine Smiles Orthodontics & Pediatric Dentistry virtual office tour"
+              src={business.virtualTourEmbedUrl}
               width="100%"
               height="420"
               style={{ border: 0 }}

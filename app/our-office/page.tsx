@@ -30,10 +30,8 @@ export default function OurOfficePage() {
 
           <div className="rounded-3xl overflow-hidden shadow-lg mt-8 border-2 border-slate-100">
             <iframe
-              title="Pine Smiles location map and street view"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(
-                business.mapsQuery
-              )}&output=embed`}
+              title="Pine Smiles virtual office tour"
+              src={business.virtualTourEmbedUrl}
               width="100%"
               height="320"
               style={{ border: 0 }}

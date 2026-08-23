@@ -14,19 +14,19 @@ export default function Header() {
         Now welcoming new smiles! Call {business.phone} to schedule.
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 flex items-center justify-between h-20">
+      <div className="mx-auto max-w-7xl px-4 flex items-center justify-between h-20 gap-3">
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="font-heading text-2xl md:text-3xl text-pine-pink">
+          <span className="font-heading text-xl xl:text-2xl text-pine-pink whitespace-nowrap">
             Pine Smiles
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center">
           {nav.map((item) => (
             <div key={item.label} className="relative group">
               <Link
                 href={item.href}
-                className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-pine-pink transition-colors inline-block"
+                className="px-2.5 py-2 text-[13px] font-semibold text-slate-700 hover:text-pine-pink transition-colors inline-block whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -37,7 +37,7 @@ export default function Header() {
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-5 py-2.5 text-sm font-medium text-slate-600 hover:bg-pine-cream hover:text-pine-pink transition-colors"
+                        className="block px-5 py-2.5 text-sm font-medium text-slate-600 hover:bg-pine-cream hover:text-pine-pink transition-colors whitespace-nowrap"
                       >
                         {child.label}
                       </Link>
@@ -49,11 +49,11 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <a href={business.phoneHref} className="text-sm font-bold text-pine-blue">
-            {business.phone}
-          </a>
-          <Link href="/our-office" className="btn-pill bg-pine-orange text-white text-sm">
+        <div className="hidden xl:flex items-center shrink-0">
+          <Link
+            href="/our-office"
+            className="btn-pill bg-pine-orange text-white text-sm whitespace-nowrap"
+          >
             Schedule an Appointment
           </Link>
         </div>
@@ -63,7 +63,7 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
-          className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10"
+          className="xl:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 shrink-0"
         >
           <span
             className={`block h-0.5 w-7 bg-pine-pink transition-transform ${
@@ -84,7 +84,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <nav className="lg:hidden border-t border-slate-100 bg-white max-h-[75vh] overflow-y-auto">
+        <nav className="xl:hidden border-t border-slate-100 bg-white max-h-[75vh] overflow-y-auto">
           {nav.map((item) => (
             <div key={item.label} className="border-b border-slate-100">
               <div className="flex items-center justify-between">
